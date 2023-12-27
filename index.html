@@ -9,12 +9,23 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Iceland&family=Lato&display=swap"
       rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css" />
     <title>Clock & Dark Theme</title>
   </head>
   <body>
     <main>
-      <span id="time-text">Current Time:</span>
-      <span id="timer"></span>
+      <div id="time-container">
+        <span id="time-text">Current Time:</span>
+        <span id="timer"></span>
+      </div>
+      <div id="box-switch-btn">
+        <i class="icon fi fi-sr-brightness"></i>
+        <input type="checkbox" name="" id="input-switch" />
+        <label for="input-switch" id="btn-switch"></label>
+        <i class="icon fi fi-sr-moon"></i>
+      </div>
     </main>
     <script src="JS/app.js"></script>
   </body>

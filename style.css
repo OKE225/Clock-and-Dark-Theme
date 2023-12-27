@@ -1,23 +1,79 @@
-:root {
-  font-size: 10px;
+@import url("https://cdn-uicons.flaticon.com/2.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css");
+
+* {
   padding: 0;
   margin: 0;
 }
 
+:root {
+  font-size: 20px;
+}
+
 main {
-  display: flex;
-  align-items: baseline;
   width: 95%;
   margin: 0 auto;
 }
 
-main > span#time-text {
+main > div#time-container {
+  display: flex;
+  align-items: baseline;
+}
+
+main > div#time-container > span#time-text {
   font-family: "Lato", sans-serif;
   font-size: 2rem;
 }
 
-main > span#timer {
+main > div#time-container > span#timer {
   font-family: "Iceland", sans-serif;
   font-size: 5rem;
   margin-left: 2%;
+}
+
+main > div#box-switch-btn {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 50px 0;
+}
+
+main > div#box-switch-btn > label#btn-switch {
+  position: relative;
+  background-color: #cdd1e2;
+  width: 75px;
+  height: 35px;
+  margin: 0 20px;
+  cursor: pointer;
+  border-radius: 100px;
+  transition: 0.2s;
+}
+
+main > div#box-switch-btn > label#btn-switch::before {
+  background-color: #ffffff;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin: 2.5px;
+  content: "";
+  border-radius: 100px;
+  transition: 0.2s;
+}
+
+input#input-switch:checked + label#btn-switch {
+  background-color: #3fbd89;
+}
+
+input#input-switch:checked + label#btn-switch::before {
+  transform: translateX(40px);
+}
+
+main > div#box-switch-btn > i.icon {
+  display: flex;
+  font-size: 2rem;
+  color: #cdd1e2;
+  height: 100%;
+}
+
+main > div#box-switch-btn > input#input-switch {
+  display: none;
 }
