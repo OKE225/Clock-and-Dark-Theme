@@ -65,7 +65,7 @@ function addBeginningZero(num) {
 }
 const divBoxToggleSwitch = document.querySelector("div#box-switch-btn");
 const inputToggleSwitch = document.querySelector("input#input-switch");
-inputToggleSwitch === null || inputToggleSwitch === void 0 ? void 0 : inputToggleSwitch.addEventListener("change", function () {
+function changeTheme() {
     if (inputToggleSwitch.checked) {
         bodyHTML.style.backgroundColor = "black";
         spanTimer.style.color = "white";
@@ -78,8 +78,9 @@ inputToggleSwitch === null || inputToggleSwitch === void 0 ? void 0 : inputToggl
         spanTimeText.style.color = "black";
         divBoxToggleSwitch.style.color = "black";
     }
-});
+}
 window.onload = function () {
     setInterval(renderTime, 100);
     renderTime();
+    inputToggleSwitch === null || inputToggleSwitch === void 0 ? void 0 : inputToggleSwitch.addEventListener("change", changeTheme);
 };

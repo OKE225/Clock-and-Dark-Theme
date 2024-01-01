@@ -92,7 +92,7 @@ const inputToggleSwitch: HTMLInputElement = document.querySelector(
   "input#input-switch"
 ) as HTMLInputElement;
 
-inputToggleSwitch?.addEventListener("change", function (): void {
+function changeTheme(): void {
   if (inputToggleSwitch.checked) {
     bodyHTML.style.backgroundColor = "black";
     spanTimer.style.color = "white";
@@ -104,9 +104,11 @@ inputToggleSwitch?.addEventListener("change", function (): void {
     spanTimeText.style.color = "black";
     divBoxToggleSwitch.style.color = "black";
   }
-});
+}
 
 window.onload = function (): void {
   setInterval(renderTime, 100);
   renderTime();
+
+  inputToggleSwitch?.addEventListener("change", changeTheme);
 };

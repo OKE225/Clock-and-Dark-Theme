@@ -6,7 +6,7 @@
 }
 
 :root {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 main {
@@ -16,30 +16,22 @@ main {
 
 main > div#time-container {
   display: flex;
-  align-items: baseline;
-}
-
-main > div#time-container > span#time-text,
-main > div#box-switch-btn {
-  font-family: "Lato", sans-serif;
-  font-size: 2rem;
+  justify-content: center;
+  margin-top: 75px;
 }
 
 main > div#time-container > span#timer {
   font-family: "Iceland", sans-serif;
   font-size: 5rem;
-  margin-left: 2%;
 }
 
 main > div#box-switch-btn {
   display: flex;
   flex-wrap: nowrap;
+  justify-content: center;
   align-items: center;
-  margin: 50px 0;
-}
-
-main > div#box-switch-btn > p {
-  margin: 0 2.5% 0 0;
+  font-size: 2rem;
+  margin: 25px 0;
 }
 
 main > div#box-switch-btn > label#btn-switch {
@@ -72,7 +64,7 @@ input#input-switch:checked + label#btn-switch::before {
   transform: translateX(40px);
 }
 
-main > div#box-switch-btn > i.icon {
+main > div#box-switch-btn > i {
   display: flex;
   font-size: 2rem;
   color: #cdd1e2;
@@ -81,4 +73,10 @@ main > div#box-switch-btn > i.icon {
 
 main > div#box-switch-btn > input#input-switch {
   display: none;
+}
+
+@media (max-width: 576px) {
+  :root {
+    font-size: 17.5px;
+  }
 }
