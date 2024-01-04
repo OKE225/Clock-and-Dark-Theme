@@ -6,10 +6,6 @@ const spanTimer: HTMLDivElement = document.querySelector(
   "span#timer"
 ) as HTMLDivElement;
 
-const spanTimeText: HTMLSpanElement = document.querySelector(
-  "span#time-text"
-) as HTMLSpanElement;
-
 function renderTime(): void {
   const hours: number = new Date().getHours();
   const minutes: number = new Date().getMinutes();
@@ -84,6 +80,10 @@ function addBeginningZero(num: number): string {
   }
 }
 
+const divTimeContainer: HTMLDivElement = document.querySelector(
+  "div#time-container"
+) as HTMLDivElement;
+
 const divBoxToggleSwitch: HTMLDivElement = document.querySelector(
   "div#box-switch-btn"
 ) as HTMLDivElement;
@@ -96,12 +96,12 @@ function changeTheme(): void {
   if (inputToggleSwitch.checked) {
     bodyHTML.style.backgroundColor = "black";
     spanTimer.style.color = "white";
-    spanTimeText.style.color = "white";
+    divTimeContainer.style.color = "white";
     divBoxToggleSwitch.style.color = "white";
   } else {
     bodyHTML.style.backgroundColor = "white";
     spanTimer.style.color = "black";
-    spanTimeText.style.color = "black";
+    divTimeContainer.style.color = "black";
     divBoxToggleSwitch.style.color = "black";
   }
 }

@@ -1,7 +1,6 @@
 "use strict";
 const bodyHTML = document.querySelector("body");
 const spanTimer = document.querySelector("span#timer");
-const spanTimeText = document.querySelector("span#time-text");
 function renderTime() {
     const hours = new Date().getHours();
     const minutes = new Date().getMinutes();
@@ -63,19 +62,20 @@ function addBeginningZero(num) {
         return `${num}`;
     }
 }
+const divTimeContainer = document.querySelector("div#time-container");
 const divBoxToggleSwitch = document.querySelector("div#box-switch-btn");
 const inputToggleSwitch = document.querySelector("input#input-switch");
 function changeTheme() {
     if (inputToggleSwitch.checked) {
         bodyHTML.style.backgroundColor = "black";
         spanTimer.style.color = "white";
-        spanTimeText.style.color = "white";
+        divTimeContainer.style.color = "white";
         divBoxToggleSwitch.style.color = "white";
     }
     else {
         bodyHTML.style.backgroundColor = "white";
         spanTimer.style.color = "black";
-        spanTimeText.style.color = "black";
+        divTimeContainer.style.color = "black";
         divBoxToggleSwitch.style.color = "black";
     }
 }

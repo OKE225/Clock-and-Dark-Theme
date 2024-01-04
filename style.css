@@ -16,13 +16,19 @@ main {
 
 main > div#time-container {
   display: flex;
-  justify-content: center;
-  margin-top: 75px;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
 }
 
 main > div#time-container > span#timer {
   font-family: "Iceland", sans-serif;
   font-size: 5rem;
+}
+
+main > div#time-container > p#timer-desc {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 5px;
 }
 
 main > div#box-switch-btn {
@@ -31,7 +37,7 @@ main > div#box-switch-btn {
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  margin: 25px 0;
+  margin: 50px 0;
 }
 
 main > div#box-switch-btn > label#btn-switch {
